@@ -1,0 +1,114 @@
+.page-container {
+  padding: 30px;
+  min-height: 100vh;
+}
+
+.page-container h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.tickets-grid{
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     display: grid;
+     gap: 20px;
+     /* grid-template-columns: repeat((2, 1fr)); */
+     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+}
+
+.ticket-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  /* width: 100%; */
+}
+
+.ticket-card select{
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #3498db;
+  background:#e5e9ea;
+  margin-left: 10px;
+}
+
+.student-page {
+  background: #f0ecec;             /* very light blue */
+}
+.student-page .ticket-card {
+  border-left: 5px solid #6c8fbf;  /* soft blue stripe */
+}
+.student-page .ticket-card p {
+  color: #2c3e50;
+}
+
+.student-page h2 {
+  color: #2a4b6a;
+}
+
+
+.admin-page {
+  background: #ffffff;             /* white for admin */
+}
+.admin-page .ticket-card {
+  border-left: 5px solid #e44b18;  /* stronger orange stripe */
+  padding: 10px;                   /* slightly tighter padding */
+}
+.admin-page .ticket-card p {
+  font-size: 14px;                 /* even more compact for admin */
+  color: #333;
+}
+
+.ticket-card p {
+     margin: 5px ;
+     font-size:20px;
+}
+
+/* @media (min-width: 1280px) {
+  .tickets-grid {
+    margin-right: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+} */
+
+@media (min-width: 1200px) {
+  .student-page .tickets-grid {
+    grid-template-columns: repeat(2, 1fr); /* exactly 2 columns on wide screens */
+  }
+}
+
+.status-open {
+  color: #e74c3c;       
+  font-weight: 600;
+}
+
+.status-in-progress {
+  color: #e0a321;       
+  font-weight: 600;
+}
+
+.status-closed {
+  color: #27ae60;       
+  font-weight:600;
+}
+.email-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.email-btn:hover {
+  background-color: #2c80b4;
+}
