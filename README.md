@@ -43,10 +43,10 @@ Open http://localhost:3000 to view it in your browser.
 ---
 
 📌 Future Improvements
-✅ Add backend authentication (Node.js + MySQL)
-✅ Role-based access control
-✅ Deploy to Netlify/Heroku for public access
-✅ Enhanced dashboards with analytics
+- ✅ Add backend authentication (Node.js + MySQL)
+- ✅ Role-based access control
+- ✅ Deploy to Netlify/Heroku for public access
+- ✅ Enhanced dashboards with analytics
 
 ---
 
@@ -64,6 +64,9 @@ Open http://localhost:3000 to view it in your browser.
 
 ### Raise Ticket
 ![Raise Ticket](./src/screenshots/RaiseTicket.png)
+
+### My Tickets
+![My Tickets](./src/screenshots/MyTickets.png)
 
 ### Admin Dashboard
 ![Admin Dashboard](./src/screenshots/Admin-Dashboard.png)
