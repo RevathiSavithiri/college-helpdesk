@@ -1,6 +1,6 @@
 .page-container {
   padding: 30px;
-  min-height: 100vh;
+  /* height: auto; */
   background: #f0ecec;   /* light grey background */
 }
 

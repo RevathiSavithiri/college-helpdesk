@@ -1,7 +1,9 @@
 body{
     height: 100vh;
-    overflow: hidden;
     background-color: #f0ecec;
+}
+.login-page{
+  overflow: hidden;
 }
 
 .clg-name {

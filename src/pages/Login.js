@@ -22,7 +22,7 @@ function Login({setUser}) {
 
 
 return(
-    <div>
+    <div className="login-page">
       <h1 className="clg-name">RP College Helpdesk Portal</h1>
       <div className="login-container">
        
