@@ -1,14 +1,30 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import "./AdminDashboard.css";
 import TicketCard from "../components/TicketCard";
 
 function AdminDashboard({tickets = [], updateTicketStatus }) {
+    const [allTickets, setAllTickets] = useState(tickets); 
 
     const [searchTerm, setSearchTerm] = useState("");
     const [filterCategory, setFilterCategory] = useState("all");
     const [sortOrder, setSortOrder] = useState("newest");
+   
+     useEffect(() => {
+         const savedTickets = JSON.parse(localStorage.getItem("tickets")) || [];
+        setAllTickets(savedTickets);
+        }, []);
 
-    const filteredTickets = tickets
+     useEffect(() => {
+         localStorage.setItem("tickets", JSON.stringify(allTickets));
+        }, [allTickets]);
+
+ 
+     const removeTicket = (id) => {
+         setAllTickets((prev) => prev.filter((t) => t.id !== id));
+        };
+
+
+    const filteredTickets = allTickets
     .filter(
       (t) =>
         (t.id && t.id.toLowerCase().includes(searchTerm.toLowerCase())) ||
@@ -55,11 +71,10 @@ function AdminDashboard({tickets = [], updateTicketStatus }) {
             ):(
                 <ul className="tickets-grid">
                     {filteredTickets.map((t) =>(
-                        <TicketCard key={t.id} ticket={t} showStatusDropdown={true} 
-                                    updateTicketStatus={updateTicketStatus} 
-                                    showEmailButton={true} />
+                        <TicketCard key={t.id} ticket={t} showStatusDropdown={true} updateTicketStatus={updateTicketStatus} 
+                                    showEmailButton={true} removeTicket={removeTicket}/>
                                  
-                       ))}
+                    ))}
                 </ul>
             )}
         </div>

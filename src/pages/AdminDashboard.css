@@ -2,7 +2,7 @@
 .page-container {
   padding: 30px;
   min-height: 100vh;
-  background: #ffffff;   /* white background */
+  background: #ffffff;   
 }
 
 .page-container h2 {
@@ -23,7 +23,7 @@
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0px 1px 4px rgba(0,0,0,0.1);
-  border-left: 5px solid #e44b18; /* orange stripe */
+  border-left: 5px solid #e44b18; 
 }
 
 .ticket-card p {
@@ -52,6 +52,7 @@
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 20px;
+  
 }
 
 .controls input,
@@ -62,4 +63,7 @@
   font-size: 14px;
 }
 
+.controls input{
+  width: 200px;
+}
 

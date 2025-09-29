@@ -1,49 +1,10 @@
-.page-container {
-  padding: 30px;
-  /* height: auto; */
-  background: #f0ecec;   /* light grey background */
+.page-container.student-page {
+  background: #f0ecec;   
 }
-
-.page-container h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-  color: #2a4b6a;
-}
-
-.tickets-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-}
-
-.ticket-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
-  border-left: 5px solid #6c8fbf; /* soft blue stripe */
-}
-
 .ticket-card p {
   margin: 5px;
   font-size: 20px;
   color: #2c3e50;
-}
-
-.status-open {
-  color: #e74c3c;
-  font-weight: 600;
-}
-
-.status-in-progress {
-  color: #e0a321;
-  font-weight: 600;
-}
-
-.status-closed {
-  color: #27ae60;
-  font-weight: 600;
 }
 
 @media (min-width: 1200px) {
@@ -52,14 +13,42 @@
   }
 }
 
-.controls input,
-.controls select {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
+.attachment-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
 
+.attachment-item {
+  position: relative;
 }
-.controls input{
- width: 200px;
+
+.attachment-img {
+  width: 40px;
+  height: 30px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
+
+.image-preview-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.image-preview-full {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
